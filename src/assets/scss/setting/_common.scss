@@ -1,4 +1,61 @@
 body {
-  background-color: var(--black);
-  color: var(--white);
+    background-color: var(--black);
+    color: var(--white);
+}
+// 섹션 공통 요소
+section {
+    padding: 40px;
+
+    @media (max-width:800px) { //화면이 800px이하로 가면 padding이 20px로 적용됨
+        padding: 20px;
+    }
+
+    h2{
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+}
+
+//마우스 오버 아이콘
+//이 코드는 특정 요소에 마우스를 올렸을 때 가상 요소 ::before와 ::after를 사용하여 배경과 아이콘을 표시하는 효과를 만듭니다
+.play_icon{
+    a{ //a의 부모요소는 .play_icno클래스를 포함하는 HTML요소이다
+        position: relative; // 기준점
+        display: block;
+        cursor: pointer; //마우스 커서를 포인터로 설정하여 요소를 클릭할 수 있는 것처럼 보이게 합니다.
+        width: 100%;
+
+        &::before{ //배경 하나 만들기, 살짝 투명한 화면 설정
+            content: '';
+            height: 100%;
+            width: 100%;
+            background-color: #00000071;
+            position: absolute; // 기준점을 기준으로 위치 선정
+            left: 0;
+            top: 0;
+            transition: background-color 0.3s;
+        }
+
+        &:hover::before{ //마우스를 올렸을 때
+            background-color: #00000000; //살짝 투명한 화면이 완전 투명해짐 -> 원래 화면이 보임
+        }
+
+        &::after{ // 플레이 아이콘
+            content: '';
+            width: 80px;
+            height: 80px;
+            background: #000000d0 url(../../img/icon/play.svg) no-repeat center; // 여러가지 속성 삽입 시 하나의 속성 값 명시x
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            opacity: 0; // 투명도 -> 처음엔 플레이 아이콘이 보이지 않도록 설정
+            transition: opacity 0.3s;
+        }
+
+        &:hover::after{
+            opacity: 1; // 불투명하게 변환
+        }
+    }
 }

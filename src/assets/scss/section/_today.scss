@@ -1,0 +1,88 @@
+.today_inner{ // 이것도 섹션이다
+    display: flex;
+    background-color: var(--black100);
+    margin-bottom: 3.125rem;
+}
+
+.today_thumb{
+    width: 40%;
+}
+
+.today_text{
+    width: 60%;
+    padding: 2rem;
+    .today{
+        background-color: var(--red);
+        padding: 2px 50px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: inline-block;
+    }   
+    .title{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        @include line-one
+    }
+    .desc{
+        margin-bottom: 1rem;
+        color: var(--white200);
+        @include line(4)
+    }
+    .info{
+        .author{
+            font-size: 1rem;
+            margin-right: 10px;
+            font-weight: 900;
+            text-decoration: underline;
+            text-underline-position: under;
+            text-transform: uppercase;
+        }
+        .date{
+            font-style: 0.8rem;
+            color: var(--white200);
+        }
+    }
+}
+
+
+@media(max-width:1700px){ // media ->반응형 웹 디자인에서 자주 사용
+    .today_inner{
+        .today_thumb{
+            width: 500px;
+        }
+        .today_text{
+            width: calc(100% - 500px);
+
+            .desc{
+                @include line(2);
+            }
+        }
+    }
+}
+
+@media(max-width:1200px){
+    .today_inner{
+        flex-direction: column; // 자식요소가 수직방향으로 배치
+        .today_thumb{
+            width: 100%;
+        }
+        .today_text{
+            width: 100%;
+
+            .title{
+                font-size: 24px;
+            }
+
+            .desc{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px){
+    #todayPage, #today{
+        margin-top: 80px;
+    }
+}
