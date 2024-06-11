@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
         return (
-        <section id='gsap'>
+        <section id='portfolio'>
             <h2>🤗 포트폴리오 만드는 방법을 공유합니다.</h2>
             <div className='video_inner'>
                 {portfolioText.map((video, key) => (
