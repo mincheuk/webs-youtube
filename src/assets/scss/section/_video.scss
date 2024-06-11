@@ -1,0 +1,9 @@
+.video_inner{
+    display: grid;
+    grid-template-columns: repeat(4, 24%);  //4개로 반복?
+    justify-content: space-between; // 각 그리드의 사이가 자동으로 벌어지게 함
+
+    .video{
+        margin-bottom: 20px;
+    }
+}

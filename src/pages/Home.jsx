@@ -18,7 +18,6 @@ const Home = () => {
             <Today />
             <Developer />
             <Webd />
-            <Webd />
             <Website />
             <Gsap />
             <Portfolio/>
