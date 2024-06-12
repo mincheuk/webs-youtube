@@ -4,17 +4,17 @@
     justify-content: space-between; // 각 그리드의 사이가 자동으로 벌어지게 함
 
     @media (max-width: 1500px) {
-        grid-template-columns: repeat(3, 32%);  //4개로 반복?
+        grid-template-columns: repeat(3, 32%);
         gpa: 15px;
         
     }
     @media (max-width: 1200px) {
-        grid-template-columns: repeat(2, 49%);  //4개로 반복?
+        grid-template-columns: repeat(2, 49%);  
         gpa: 10px;
         
     }
     @media (max-width: 400px) {
-        grid-template-columns: repeat(1, 100%);  //4개로 반복?
+        grid-template-columns: repeat(1, 100%);  
     }
     .video{
         margin-bottom: 20px;
