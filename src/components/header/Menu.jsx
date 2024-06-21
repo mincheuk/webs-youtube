@@ -6,9 +6,10 @@ import { Link, useLocation} from 'react-router-dom';
 const Menu = () => {
     const location = useLocation(); 
     return (
-        <nav className='header__menu'>
+        <nav className='header_menu'>
                     <ul className='menu'>
-                        {headerMenus.map((menu, key) => {  {/* menu는 배열의 요소 key는 배열의 인덱스*/ }
+                        {headerMenus.map((menu, key) => {   //menu는 배열의 요소 key는 배열의 인덱스이다
+
                             return (
                                 <li key={key} className={location.pathname === menu.src ? 'active' : ''}>
                                 <Link to={menu.src}>                             {/*Link는 React의 a 태그 */}

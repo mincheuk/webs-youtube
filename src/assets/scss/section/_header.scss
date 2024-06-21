@@ -30,7 +30,7 @@
     } 
 
 
-.header__menu{
+.header_menu{
     padding: 10px 0;
 
     .menu {
@@ -86,8 +86,7 @@
 
                 &:hover{ //마우스가 다가가면 색 바뀌는 기능
                     background-color: var(--black200);
-                    color: var(--white);
-                    
+                    color: var(--white);                    
 
             }
             }

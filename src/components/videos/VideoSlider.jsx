@@ -16,12 +16,12 @@ const VideoSlider = ({ videos, title, id }) => {
         }, 500);
     }, []);
 
-    const youtubeClass = loading ? 'isLoading' : 'isLoaded';
-    
+    const youtubeClass = loading ? 'isLoading' : 'isLoaded'; //삼항연산자
+
     return (
         <section id={id} className={youtubeClass} >
             <h2>{title}</h2>
-            <div className='video__slider'>
+            <div className='video_slider'>
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={20}
@@ -50,7 +50,7 @@ const VideoSlider = ({ videos, title, id }) => {
                     {videos.map((video, key) => (
                         <SwiperSlide key={key}>
                             <div className="video" key={key}>
-                                <div className="video__thumb play__icon">
+                                <div className="video_thumb play_icon">
                                     <Link to={`/video/${video.videoId}`}>
                                         <img src={video.img} alt={video.title} />
                                     </Link>

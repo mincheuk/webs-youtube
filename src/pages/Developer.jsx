@@ -4,6 +4,7 @@ import Main from '../components/section/Main'
 import { developerText } from '../data/developer'
 import { Link } from 'react-router-dom'
 
+//추천 개발자 클릭 시 나오는 화면
 const Developer = () => {
     return (
         <Main 

@@ -19,7 +19,7 @@ export const developerText = [
     },
     {
         img: "https://yt3.googleusercontent.com/ytc/AOPolaSn88PvVXWN_Wy5vSr-5Eo_NGDdw_apL6bM7QKfCw=s176-c-k-c0x00ffffff-no-rj",
-        name: "노마드 코더 Nomad Coders",
+        name: "노마드 코더",
         channelAddress: "https://www.youtube.com/@nomadcoders",
         channelId: "UCUpJs89fSBXNolQGOYKn0YQ"
     },
